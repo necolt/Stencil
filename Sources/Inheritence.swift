@@ -37,7 +37,7 @@ extension Collection {
     return nil
   }
   #else
-  func any(closure: Iterator.Element -> Bool) -> Iterator.Element? {
+  func any(closure: (Iterator.Element) -> Bool) -> Iterator.Element? {
     for element in self {
       if closure(element) {
         return element
